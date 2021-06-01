@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarea 03 - Leaflet - capas WMS, raster y de coropletas</title>   
+
+
+    <!-- Enlace a biblioteca JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    
+    <!-- Enlace a hoja CSS de Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    
+    <!-- Enlace a biblioteca JavaScript de Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>   
+
+    <!-- Enlace a complemento Leaflet-choropleth -->
+    <script src="js/choropleth.js"></script> 
+	
+	    <!-- Enlace a leaflet-providers -->  
+    <script src="js/leaflet-providers.js"></script>  
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+
+</head>
+<body>
+	<div class= 'row'>
+	
+				<h1>Tarea 03 - Leaflet - capas WMS, raster y de coropletas</h1>
+				<p>
+				<h2> Casos Positivos de COVID-19, por cantón, para el 28 de Mayo del 2021 </h2>
+		<div class='column'>
+				
+				<!-- Elemento div para contener el mapa Leaflet -->
+				<div id="mapid"></div>
+
+		</div>		<!-- Código JavaScript para generar y manejar el mapa Leaflet -->
+				<script src="js/scripts.js"></script>	
+				
+				
+		<div class='column'>		
+		
+			Casos Positivos sin cantón definido: 616.  
+			<p>
+			<h3>Opacidad de la capa: </h3>
+			<p> 
+			<h4>Rango Diurno Medio (media mensual (temperatura máxima - temperatura mínima)): <span id="span-opacity_rdn">0.5</span></h4>
+			<input type='range' id='sld-opacity_rdn' min='0' max='1' step='0.1' value='0.5' onchange='updateOpacity_rdn();'>
+			
+		</div>		
+				
+	</div>
+	
+</body>
+</html>
